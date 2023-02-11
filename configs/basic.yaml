@@ -1,0 +1,18 @@
+model:
+  name: resnet18
+  n_class: 1000
+
+dataset:
+  name: ImageNet
+  batch_size: 64
+  download: True
+
+train:
+  epochs: 100
+  criterion: CrossEntropyLoss
+  optimizer: SGD
+  lr: 1e-3
+  momentum: 1e-3
+  lr_scheduler: ExponentialLR
+  gamma: 0.95
+  save_file: weight.pth
